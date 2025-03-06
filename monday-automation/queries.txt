@@ -1,0 +1,38 @@
+TO FETCH
+
+query {
+  boards {
+    id
+    name
+  }
+}
+
+
+TO CREATE A NEW BOARD
+
+mutation {
+  createBoard(name: "Automation Board") {
+    id
+    name
+  }
+}
+
+
+ADD ITEM
+
+mutation {
+  addItem(boardId: "1", name: "New Task") {
+    id
+    name
+  }
+}
+
+
+UPDATE ITEM STATUS
+
+mutation {
+  updateStatus(itemId: "101", status: "Done") {
+    id
+    status
+  }
+}
